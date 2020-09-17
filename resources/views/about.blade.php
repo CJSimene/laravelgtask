@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Given Tasks</title>
+@section('content')
 
-        <h1>WELCOME</h1>
-        <p>This is Payments page</p>
-          
-    </body>
-</html>
+
+        <h1>Pusher Test</h1>
+        <p>
+            Try publishing an event to channel <code>my-channel</code>
+            with event name <code>my-event</code>
+
+
+@endsection

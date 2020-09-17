@@ -15,6 +15,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <script src="//js.pusher.com/4.4/pusher.min.js"></script>
+    <script>
+   
+
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('e4b7b895b61f2b54f1b4', {
+            cluster: "ap1",
+            forceTLS: true
+        });
+
+        // Subscribe to the channel we specified in our Laravel Event
+        var channel = pusher.subscribe('my-channel');
+        channel.bind('my-event', function(data) {
+            alert(JSON.stringify(data));
+        });
+    </script>
 </head>
 <body>
     <div id="app">
@@ -49,7 +66,10 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-
+                            
+                            <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                            </li>
                             <li class="nav-item">
                             <a class="nav-link" href="{{ route('about') }}">{{ __('About Us') }}</a>
                             </li>
@@ -64,7 +84,7 @@
                                 </div>
 
                             </li>
-
+                            
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>

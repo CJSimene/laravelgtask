@@ -9,7 +9,7 @@
     </head>
     <body>
         <form action="/charge" method="POST">
-            {{ csrf_field() }}
+        {{ csrf_field() }}
             <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="{{ env('STRIPE_PUB_KEY') }}"
