@@ -35,4 +35,15 @@ class HomeController extends Controller
     {
         return view('payments');
     }
+
+    public function sms()
+    {
+        return view('sms');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
 }

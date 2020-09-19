@@ -22,6 +22,11 @@ Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/payments', 'HomeController@payments')->name('payments');
 Route::post('/charge', 'CheckoutController@charge');
 
+Route::get('/sms', 'HomeController@sms')->name('sms');
+Route::post('sms', 'SmsController@sendSms');
+
+Route::get('/contact', 'HomeController@contact')->name('contact');
+
 Route::get('test', function () {
     event(new App\Events\MyEvent('WELCOME TO MY PAGE'));
     return "Event has been sent!";

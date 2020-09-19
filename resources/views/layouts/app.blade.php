@@ -72,6 +72,9 @@
                             <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="nav-item">
+                            <a class="nav-link" href="{{ route('sms') }}">{{ __('SMS Int') }}</a>
+                            </li>
+                            <li class="nav-item">
                             <a class="nav-link" href="{{ route('about') }}">{{ __('About Us') }}</a>
                             </li>
                             <li class="nav-item dropdown">
@@ -81,8 +84,14 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('payments') }}">{{ __('Payments') }}</a>
+                                    
 
                                 </div>
+
+                            <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact Us') }}</a>
+                            </li>
+
 
                             </li>
                             
